@@ -1,0 +1,8 @@
+spring:
+  jersey:
+    application-path: /api
+prolion:
+  service:
+    dir: ./
+    interval: 10s
+    maxDepth: 8

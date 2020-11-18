@@ -1,0 +1,12 @@
+spring:
+  jersey:
+    application-path: /api
+  datasource:
+    url: jdbc:postgresql://postgres:5432/filewalker
+    username: postgres
+    password: geheim
+prolion:
+  service:
+    dir: ./
+    interval: 10s
+    maxDepth: 8
