@@ -5,6 +5,9 @@ spring:
     url: jdbc:postgresql://postgres:5432/filewalker
     username: postgres
     password: geheim
+  jpa:
+    hibernate:
+      ddl-auto: create
 prolion:
   service:
     dir: ./

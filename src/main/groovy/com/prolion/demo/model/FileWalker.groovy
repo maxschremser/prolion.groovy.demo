@@ -2,16 +2,16 @@ package com.prolion.demo.model
 
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
+import javax.persistence.GenerationType
 import javax.persistence.Id
 import javax.persistence.Table
 import java.nio.file.Path
 import java.sql.Date
 
 @Entity
-@Table(name = "file_walker")
 class FileWalker {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id
     private String name
     private String path

@@ -8,6 +8,7 @@ services:
       POSTGRES_DB: filewalker
     volumes:
       - ./data:/var/lib/postgresql/data
+      - ./data.sql:/docker-entrypoint-initdb.d/data.sql
     ports:
       - 5432:5432
 
@@ -15,5 +16,8 @@ services:
     image: demo:0.0.1-SNAPSHOT
     environment:
       SPRING_PROFILES_ACTIVE: prod
+      PROLION_SERVICE_DIR: /
+      PROLION_SERVICE_MAXDEPTH: 3
+      PROLION_SERVICE_INTERVAL: 10s
     ports:
       - 8080:8080
